@@ -17,7 +17,7 @@ const page = () => {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default page
