@@ -4,6 +4,8 @@ import "./globals.css";
 import Nav from "@/Components/Nav";
 import ToasterProvider from "@/providers/ToasterProvider";
 import Footer from "@/Components/Footer";
+import SupabaseProvider from "@/providers/SupabaseProvider";
+import UserProvider from "@/providers/UserProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +33,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased` } suppressHydrationWarning
       >
         <ToasterProvider/>
+        <SupabaseProvider>
+        <UserProvider>
         <Nav />
         {children}
+        </UserProvider>
+        </SupabaseProvider>
         <Footer/>
       </body>
     </html>
