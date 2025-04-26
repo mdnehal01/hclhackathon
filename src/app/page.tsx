@@ -3,19 +3,22 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='bg-white h-full min-h-screen text-black'>
-      <div className=' font-serif uppercase text-8xl text-center '>Simple and Tasty recipies</div>
-      <section className='section-2 flex flex-row justify-center items-center gap-4 h-[30vh] px-10'>
-        <div className='left w-[50%]'><img src="public\PizzaImage1.jpeg" className='w-full h-full' alt="" /></div>
-        <div className='right w-[50%]'>
-        <div className="grid grid-flow-col grid-rows-2 gap-0">
-  <div className='border-b-[1.5px] px-10 py-4 border-r-[1.5px]'>01</div>
-  <div className='border-r-[1.5px] px-10 py-4'><p>A restaurant is a business that serves food and drinks to customers. Meals are generally served and eaten on the premise</p></div>
-  <div className='border-b-[1.5px] px-10 py-4'>3</div>
-  <div className=' px-10 py-4 '><img src="C:\Users\DELL\Desktop\New folder\hclhackathon\public\PizzaImage1.jpeg" alt="" /></div>
-</div>
-        </div>
-      </section>
+    <div className="flex flex-col items-center justify-center py-20 bg-[#f8f9fa] text-center">
+
+      {/* Main Heading */}
+      <h1 className="text-6xl md:text-8xl font-serif font-bold leading-tight tracking-wide relative">
+        SIMPLE AND
+        {/* Salad Image between text */}
+        <span className="inline-block mx-4 align-middle">
+          <img
+            src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" // salad image link
+            alt="Salad"
+            className="w-16 h-16 rounded-full object-cover inline"
+          />
+        </span>
+        TASTY RECIPES
+      </h1>
+
     </div>
   );
 }
