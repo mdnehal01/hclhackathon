@@ -1,7 +1,12 @@
+import SignUpForm from '@/Components/SignUpForm'
 import React from 'react'
 
 const page = () => {
-  <SignUpForm/>
+  return (
+    <div>
+      <SignUpForm/>
+    </div>
+  )
 }
 
 export default page

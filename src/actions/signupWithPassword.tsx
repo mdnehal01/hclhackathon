@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 
 // TODO: add name, college name etc. in arguments
-const signupWithPassword = async (email:string, password:string, name:string, phone:string, address:string, city:string, pin:string) => {
+const signupWithPassword = async (email:string, password:string, name:string, phone:string, address:string, city:string, pin:string ) => {
 
     let message = "";
 
