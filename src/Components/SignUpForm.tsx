@@ -2,11 +2,8 @@
 import signupWithPassword from '@/actions/signupWithPassword';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
-import { BiCross } from 'react-icons/bi';
 import { CgClose } from 'react-icons/cg';
-import { FaCross } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
-import Button from './Button';
 import { useRouter } from 'next/navigation';
 
 const SignUpForm = () => {

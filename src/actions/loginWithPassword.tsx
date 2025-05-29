@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 // TODO: Insha: Add and extra parameter so that path is
 
-const loginWithPassword = async (email: string, password: string, router: any, redirectTo: string) => {
+const loginWithPassword = async (email: string, password: string, redirectTo?: string, router?: any) => {
   try {
     // Check if the email exists
     const { data: userExists, error: emailCheckError } = await supabase
@@ -27,13 +27,15 @@ const loginWithPassword = async (email: string, password: string, router: any, r
       email: email,
       password: password,
     });
+    
 
     if (loginError) {
-      if (loginError.message === "Invalid login credentials") {
-        toast.error("Either email or password is wrong");
-      } else {
-        toast.error("Login failed: " + loginError.message);
-      }
+      toast.error(loginError.message)
+      // if (loginError.message === "Invalid login credentials") {
+      //   toast.error("Either email or password is wrong");
+      // } else {
+      //   toast.error("Login failed: " + loginError.message);
+      // }
       return;
     }
 
