@@ -1,7 +1,6 @@
 import { supabase } from "@/lib/supabase";
-import toast from "react-hot-toast";
 
-export const getAllProducts = async () => {
+export const getAllItems = async () => {
 
     // toast.success(userId!);
     const { data, error } = await supabase
@@ -14,7 +13,7 @@ export const getAllProducts = async () => {
         return data;
     }
     if(error){
-        toast.error(error.message);
+        console.log(error.message);
     }
 }
 
