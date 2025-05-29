@@ -1,7 +1,5 @@
 "use client"
 import Image from 'next/image';
-import React from 'react'
-import Button2 from '@/Components/buttons/Button2';
 import { useRouter } from 'next/navigation';
 import HeroImg from "@/../public/images/frontend_assets/header_img.png"
 import ExploreMenu from '@/Components/ExploreMenu';

@@ -14,7 +14,7 @@ const Navbar = () => {
       {/* Left Section */}
 
       {/* Center Logo */}
-      <div className="text-3xl font-semibold tracking-wider text-amber-600 cursor-pointer" onClick={() => router.push("/")}>
+      <div className="text-3xl font-semibold tracking-wider text-amber-600 cursor-pointer  " onClick={() => router.push("/")}>
         ifood
       </div>
 
