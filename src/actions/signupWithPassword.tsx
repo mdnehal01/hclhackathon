@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 
 // TODO: add name, college name etc. in arguments
-const signupWithPassword = async (email:string, password:string, name:string, phone:string, address:string, city:string, pin:string ) => {
+const signupWithPassword = async (email:string, password:string ) => {
 
     let message = "";
 
@@ -14,6 +14,7 @@ const signupWithPassword = async (email:string, password:string, name:string, ph
         .single()
 
         if(userMail!=null){
+            if(userMail)
             message = "User already exists"
             toast.error(message)
             return message
@@ -42,12 +43,7 @@ const signupWithPassword = async (email:string, password:string, name:string, ph
                 .from('users')
                 .insert({
                   user_id: userId,
-                  name: name,
                   email: email,
-                  phone: phone,
-                  address: address,
-                  city: city,
-                  pin: pin,
                   recent_searches: []
                 });
               

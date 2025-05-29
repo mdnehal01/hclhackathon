@@ -5,13 +5,14 @@ interface ButtonProps{
     classname?: string;
     title?: string;
     children?: React.ReactNode;
+    onclick:() => void;
 }
 
 const Button:React.FC<ButtonProps> = ({
-    classname, title
+    classname, title, onclick
 }) => {
   return (
-    <StyledWrapper>
+    <StyledWrapper onClick={onclick}>
       <button className={classname}>
         {title ? title : "Hover Me"}
       </button>

@@ -34,7 +34,7 @@ const Navbar = () => {
           <BsCart2 size={28}/>
         </div>
         <div className='flex items-center justify-center cursor-pointer'>
-          <Button title='Sign Up' classname='h-10 flex items-center justify-center'/>
+          <Button onclick={() => router.push('/signup')} title='Sign Up' classname='h-10 flex items-center justify-center'/>
         </div>
       </div>
 

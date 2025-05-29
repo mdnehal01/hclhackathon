@@ -39,7 +39,7 @@ export default function RootLayout({
         {children}
         </UserProvider>
         </SupabaseProvider>
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );
